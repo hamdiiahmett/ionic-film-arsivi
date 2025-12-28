@@ -1,0 +1,7 @@
+{
+  "name": "ionicFinal",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
