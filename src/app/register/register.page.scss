@@ -1,0 +1,128 @@
+ion-content {
+  --background: linear-gradient(135deg, #e0f2f1 0%, #e3f2fd 100%);
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%; 
+  padding: 20px;
+}
+
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.90); 
+  backdrop-filter: blur(20px); 
+  -webkit-backdrop-filter: blur(20px);
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 30px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.8); 
+  box-shadow: 0 20px 40px rgba(38, 166, 154, 0.15); 
+  text-align: center;
+  animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.header-section {
+  margin-bottom: 35px;
+
+  .icon-circle {
+    width: 90px;
+    height: 90px;
+
+    background: linear-gradient(135deg, #26a69a 0%, #42a5f5 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+
+    box-shadow: 0 10px 20px rgba(66, 165, 245, 0.4);
+
+    ion-icon {
+      font-size: 45px;
+      color: white;
+    }
+  }
+
+  h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #37474f; 
+    margin: 0;
+    letter-spacing: -0.5px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #78909c;
+    margin-top: 8px;
+  }
+}
+
+.custom-input {
+  --background: #f1f8e9; 
+  border-radius: 15px;
+  margin-bottom: 18px;
+  --padding-start: 15px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); 
+  border: 1px solid rgba(38, 166, 154, 0.1); 
+  
+  ion-icon {
+    color: #26a69a; 
+    margin-right: 10px;
+  }
+
+  ion-input {
+    --placeholder-color: #b0bec5;
+    --color: #455a64;
+    font-size: 15px;
+  }
+
+  .eye-icon {
+    color: #90a4ae;
+    cursor: pointer;
+  }
+}
+
+.register-btn {
+  --background: linear-gradient(135deg, #26a69a 0%, #42a5f5 100%);
+  --border-radius: 15px;
+  --box-shadow: 0 8px 20px rgba(38, 166, 154, 0.4);
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  height: 55px;
+  --color: white;
+  transition: transform 0.2s;
+}
+
+.register-btn:active {
+  transform: scale(0.98); 
+}
+
+.footer-link {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #607d8b;
+
+  a {
+    color: #42a5f5; 
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

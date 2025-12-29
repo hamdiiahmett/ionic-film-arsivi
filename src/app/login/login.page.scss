@@ -1,0 +1,128 @@
+ion-content {
+  --background: linear-gradient(135deg, #e0f2f1 0%, #e3f2fd 100%);
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 30px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 20px 40px rgba(38, 166, 154, 0.15); 
+  text-align: center;
+  animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.header-section {
+  margin-bottom: 30px;
+
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #26a69a 0%, #42a5f5 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 10px 20px rgba(66, 165, 245, 0.3);
+
+    ion-icon {
+      font-size: 40px;
+      color: white;
+    }
+  }
+
+  h2 {
+    color: #37474f;
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  p {
+    color: #78909c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+}
+
+.custom-input {
+  --background: #f1f8e9; 
+  border-radius: 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(38, 166, 154, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+
+  ion-icon {
+    color: #26a69a; 
+    margin-right: 10px;
+  }
+  
+  .eye-icon {
+    cursor: pointer;
+    color: #90a4ae;
+  }
+}
+
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 0.85rem;
+
+  ion-checkbox {
+    --size: 18px;
+    --checkbox-background-checked: #26a69a; 
+    --border-color-checked: #26a69a;
+    color: #546e7a;
+  }
+
+  .forgot-link {
+    color: #42a5f5;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.action-btn {
+  --background: linear-gradient(90deg, #26a69a 0%, #42a5f5 100%);
+  --box-shadow: 0 8px 20px rgba(38, 166, 154, 0.3);
+  height: 50px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s;
+  
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.footer-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #607d8b;
+
+  a {
+    color: #26a69a;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

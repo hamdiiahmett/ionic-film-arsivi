@@ -1,27 +1,137 @@
-#container {
+.header-gradient {
+  --background: linear-gradient(90deg, #26a69a 0%, #42a5f5 100%);
+  --color: white;
+  padding-bottom: 5px;
+}
+
+.app-title {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  .user-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-right: 5px;
+  }
+}
+
+.bg-content {
+  --background: #f1f8e9; 
+}
+
+.movie-list {
+  padding: 10px;
+  background: transparent;
+}
+
+.transparent-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+
+.movie-card {
+  background: white;
+  width: 100%;
+  margin: 5px 10px;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(38, 166, 154, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-icon {
+  background: linear-gradient(135deg, #26a69a 0%, #80cbc4 100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  
+  ion-icon {
+    font-size: 24px;
+  }
+}
+
+.card-info {
+  flex: 1;
+  
+  .movie-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #37474f;
+    margin: 0 0 5px 0;
+  }
+  
+  .movie-genre {
+    color: #00897b; 
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+  }
+}
+
+.star-rating {
+  .star-icon {
+    color: #fdd835; 
+    font-size: 14px;
+  }
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column; 
+}
+
+.delete-option {
+  --background: #ef5350;
+  border-radius: 15px 0 0 15px;
+  margin: 5px 0;
+}
+
+.empty-state {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 30%;
+  
+  .empty-icon-circle {
+    width: 100px;
+    height: 100px;
+    background: rgba(38, 166, 154, 0.1);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    ion-icon {
+      font-size: 50px;
+      color: #26a69a;
+    }
+  }
+  
+  h3 {
+    color: #37474f;
+    font-weight: bold;
+  }
+  
+  p {
+    color: #90a4ae;
+    padding: 0 40px;
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.add-btn {
+  --background: linear-gradient(135deg, #26a69a 0%, #42a5f5 100%);
+  --box-shadow: 0 10px 20px rgba(38, 166, 154, 0.4);
+  --color: white;
 }

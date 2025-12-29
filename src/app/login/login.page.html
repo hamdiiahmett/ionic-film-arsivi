@@ -1,0 +1,61 @@
+<ion-content class="bg-gradient">
+  
+  <div class="main-container">
+    
+    <div class="glass-card">
+      
+      <div class="header-section">
+        <div class="icon-circle">
+          <ion-icon name="finger-print-outline"></ion-icon>
+        </div>
+        <h2>Hoş Geldiniz</h2>
+        <p>Hesabınıza erişmek için giriş yapın</p>
+      </div>
+
+      <div class="input-group">
+        <ion-item lines="none" class="custom-input">
+          <ion-icon slot="start" name="mail-outline"></ion-icon>
+          <ion-input 
+            [(ngModel)]="email" 
+            type="email" 
+            label="E-Posta" 
+            labelPlacement="floating" 
+            placeholder="ornek@email.com">
+          </ion-input>
+        </ion-item>
+
+        <ion-item lines="none" class="custom-input">
+          <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+          <ion-input 
+            [(ngModel)]="password" 
+            [type]="sifreGoster ? 'text' : 'password'" 
+            label="Şifre" 
+            labelPlacement="floating" 
+            placeholder="******">
+          </ion-input>
+          <ion-icon 
+            slot="end" 
+            [name]="sifreGoster ? 'eye-off-outline' : 'eye-outline'" 
+            (click)="sifreGoster = !sifreGoster"
+            class="eye-icon">
+          </ion-icon>
+        </ion-item>
+      </div>
+
+      <div class="options-row">
+        <ion-checkbox [(ngModel)]="beniHatirla" mode="ios">Beni Hatırla</ion-checkbox>
+        <a (click)="sifremiUnuttum()" class="forgot-link">Şifremi Unuttum?</a>
+      </div>
+
+      <ion-button (click)="login()" expand="block" shape="round" class="action-btn">
+        Giriş Yap
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+      </ion-button>
+
+      <div class="footer-link">
+        <p>Hesabın yok mu? <a [routerLink]="['/register']">Hemen Kayıt Ol</a></p>
+      </div>
+
+    </div>
+  </div>
+</ion-content>
